@@ -28,3 +28,9 @@ Output Latitude and Longitude:
 
 Opening coordinates in Google Maps...
 ```
+
+## Caso de Uso
+
+Podemos usarlo para obtener las coordenadas en Google Maps en base a una referencia catastral [Sede Electrónica del Catastro](https://www1.sedecatastro.gob.es/cycbieninmueble/ovcbusqueda.aspx).
+
+Introducimos Referencia Catastral -> Datos -> CONSULTA DESCRIPTIVA Y GRÁFICA -> Obtenemos las coordenadas X e Y y el huso. Con ello podemos proveer al script los argumentos horizontal, vertical y zone.
