@@ -1,0 +1,20 @@
+name: pep8
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  tox:
+    runs-on: ubuntu-latest
+    container:
+      image: python:3.10
+    steps:
+      - name: Install tox
+        run: pip install tox
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Run tox
+        run: |
+          git config --global --add safe.directory "${GITHUB_WORKSPACE}"
+          tox -v
